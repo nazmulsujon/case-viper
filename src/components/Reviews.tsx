@@ -1,6 +1,6 @@
 "use client";
 
-import { HTMLAttributes, useEffect, useRef, useState } from "react";
+import React, { HTMLAttributes, useEffect, useRef, useState } from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -122,7 +122,7 @@ function ReviewGrid() {
       className="relative -mx-4 mt-16 grid h-[49rem] max-h-[150vh] grid-cols-1 items-start gap-8 overflow-hidden px-4 sm:mt-20 md:grid-cols-2 lg:grid-cols-3"
     >
       {isInView ? (
-        <>
+        <React.Fragment>
           <ReviewColumn
             reviews={[...column1, ...column3.flat(), ...column2]}
             reviewClassName={(reviewIndex) =>
@@ -146,7 +146,7 @@ function ReviewGrid() {
             className="hidden md:block"
             msPerPixel={10}
           />
-        </>
+        </React.Fragment>
       ) : null}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-100" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-100" />
