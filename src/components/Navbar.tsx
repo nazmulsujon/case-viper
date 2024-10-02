@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = async () => {
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="flex items-center z-40 text-lg font-bold">
-            <img className="w-12 h-10" src="/logo1.png" alt="" />
+            <img className="w-10" src="/logo1.png" alt="" />
             <span className="text-violet-600 font-mono">
               Case
               <span className="text-black font-">Viper</span>
